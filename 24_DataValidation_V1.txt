@@ -1,0 +1,11 @@
+// =======================
+// Validation: Required
+// =======================
+
+const patientName: string = "";
+
+if (patientName.trim() === "") {
+  console.log("Error: Patient name is required");
+} else {
+  console.log("Patient:", patientName);
+}
