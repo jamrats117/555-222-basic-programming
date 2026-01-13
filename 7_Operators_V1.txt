@@ -1,0 +1,10 @@
+// =======================
+// Operators: Arithmetic
+// =======================
+
+const dosePerKg: number = 10;   // mg/kg
+const weight: number = 60;      // kg
+
+const totalDose: number = dosePerKg * weight;
+
+console.log("Total dose (mg):", totalDose);
