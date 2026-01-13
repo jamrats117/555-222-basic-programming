@@ -1,0 +1,67 @@
+// =======================
+// CRUD Exercise 1: Medication List
+// =======================
+
+type Medication = {
+  drugName: string;
+  doseMg: number;
+};
+
+let meds: Medication[] = [
+  { drugName: "Metformin", doseMg: 500 },
+  { drugName: "Paracetamol", doseMg: 1000 }
+];
+
+// READ
+function listMeds(): void {
+  console.log("=== Medication List ===");
+  for (const m of meds) {
+    console.log("-", m.drugName, m.doseMg + " mg");
+  }
+}
+
+// CREATE
+function addMed(drugName: string, doseMg: number): void {
+  meds.push({ drugName, doseMg });
+  console.log("Added:", drugName);
+}
+
+// UPDATE (by drugName)
+function updateDose(drugName: string, newDoseMg: number): void {
+  const index = meds.findIndex(m => m.drugName === drugName);
+
+  if (index === -1) {
+    console.log("Update failed: drug not found ->", drugName);
+    return;
+  }
+
+  meds[index].doseMg = newDoseMg;
+  console.log("Updated:", drugName, "to", newDoseMg, "mg");
+}
+
+// DELETE (by drugName)
+function deleteMed(drugName: string): void {
+  const before = meds.length;
+  meds = meds.filter(m => m.drugName !== drugName);
+
+  if (meds.length === before) {
+    console.log("Delete failed: drug not found ->", drugName);
+    return;
+  }
+
+  console.log("Deleted:", drugName);
+}
+
+// ----- Demo Run -----
+listMeds();
+
+addMed("Amoxicillin", 500);
+listMeds();
+
+updateDose("Metformin", 850);
+updateDose("Aspirin", 81); // not found (error handling)
+listMeds();
+
+deleteMed("Paracetamol");
+deleteMed("Ibuprofen"); // not found (error handling)
+listMeds();
