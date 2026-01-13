@@ -1,0 +1,13 @@
+// =======================
+// Validation: Number & Range
+// =======================
+
+const doseMg: number = 1200;
+
+if (doseMg <= 0) {
+  console.log("Error: Dose must be greater than 0");
+} else if (doseMg > 1000) {
+  console.log("Warning: Dose exceeds recommended range");
+} else {
+  console.log("Dose accepted:", doseMg, "mg");
+}
