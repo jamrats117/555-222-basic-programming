@@ -1,0 +1,14 @@
+// =======================
+// Conditional Logic: Dose Adjustment
+// =======================
+
+const age: number = 68;
+const hasRenalImpairment: boolean = true;
+
+if (age >= 65 && hasRenalImpairment) {
+  console.log("Recommendation: Reduce dose");
+} else if (age >= 65 || hasRenalImpairment) {
+  console.log("Recommendation: Monitor closely");
+} else {
+  console.log("Recommendation: Standard dose");
+}
