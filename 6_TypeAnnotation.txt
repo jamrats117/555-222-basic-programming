@@ -1,0 +1,24 @@
+// =======================
+// Basic Type Annotation
+// Array & Object
+// =======================
+
+// Array: list ของตัวเลข
+const scores: number[] = [70, 85, 90];
+
+console.log("Scores:");
+for (const s of scores) {
+  console.log("-", s);
+}
+
+// Object: key เป็น string, value เป็น number
+const patientScore: Record<string, number> = {
+  Somchai: 80,
+  Ananda: 92,
+  Pranee: 75
+};
+
+console.log("Patient Scores:");
+for (const name in patientScore) {
+  console.log(name, "=", patientScore[name]);
+}
