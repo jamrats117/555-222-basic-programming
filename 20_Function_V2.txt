@@ -1,1 +1,11 @@
+// =======================
+// Function: Pass / Fail
+// =======================
+
+function isPassed(score: number): boolean {
+  return score >= 60;
+}
+
+console.log("Score 75 passed:", isPassed(75));
+console.log("Score 50 passed:", isPassed(50));
 
