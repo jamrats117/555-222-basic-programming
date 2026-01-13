@@ -1,0 +1,14 @@
+// =======================
+// Variables & Data Types
+// Example 2: Exam Summary
+// =======================
+
+const midtermScore: number = 30;
+const finalScore: number = 45;
+const maxScore: number = 100;
+
+const totalScore: number = midtermScore + finalScore;
+const isPassed: boolean = totalScore >= 60;
+
+console.log("Total:", totalScore, "/", maxScore);
+console.log("Passed:", isPassed);
