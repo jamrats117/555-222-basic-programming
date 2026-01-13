@@ -1,0 +1,9 @@
+// =======================
+// Loop: for...of
+// =======================
+
+const patients: string[] = ["Somchai", "Ananda", "Pranee"];
+
+for (const name of patients) {
+  console.log("Patient:", name);
+}
