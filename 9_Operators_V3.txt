@@ -1,0 +1,12 @@
+// =======================
+// Operators: Logical
+// =======================
+
+const age: number = 70;
+const hasRenalImpairment: boolean = true;
+
+// ผู้สูงอายุหรือมีไตเสื่อม → ต้องระวัง
+const needDoseAdjustment: boolean =
+  age >= 65 || hasRenalImpairment;
+
+console.log("Need dose adjustment:", needDoseAdjustment);
