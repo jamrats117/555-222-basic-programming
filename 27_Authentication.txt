@@ -1,0 +1,18 @@
+// =======================
+// Trust Boundary: Never trust role from client
+// =======================
+
+// สมมติ user ส่ง role มาเอง (อันตราย)
+const roleFromUser = prompt("Enter your role (student/pharmacist/admin):");
+
+// สิ่งที่ถูกต้อง: ห้ามใช้ roleFromUser เป็นสิทธิ์จริง
+console.log("Received role (UNTRUSTED):", roleFromUser);
+
+// แนวคิดที่ควรทำ: role ต้องมาจากฝั่งระบบ (server/session ที่เชื่อถือได้)
+const roleFromSystem: "student" | "pharmacist" = "student";
+
+if (roleFromSystem === "pharmacist") {
+  console.log("Allowed: edit medication");
+} else {
+  console.log("Denied: view only");
+}
