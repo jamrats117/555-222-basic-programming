@@ -1,1 +1,33 @@
+// =======================
+// Function: Display Info
+// =======================
 
+type Medication = {
+  patientName: string;
+  drugName: string;
+  doseMg: number;
+};
+
+function showMedication(med: Medication): void {
+  console.log(
+    med.patientName,
+    "takes",
+    med.drugName,
+    med.doseMg + " mg"
+  );
+}
+
+const med1: Medication = {
+  patientName: "Somchai",
+  drugName: "Metformin",
+  doseMg: 500
+};
+
+const med2: Medication = {
+  patientName: "Ananda",
+  drugName: "Paracetamol",
+  doseMg: 1000
+};
+
+showMedication(med1);
+showMedication(med2);
