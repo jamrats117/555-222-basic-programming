@@ -1,0 +1,22 @@
+// =======================
+// State & Session Logic
+// =======================
+
+// state: ตัวแปรในหน้านี้
+let visitCount: number = 0;
+
+visitCount++;
+console.log("Visit count (state):", visitCount);
+
+// session-like: เก็บใน browser (จำข้าม refresh)
+const savedCount = sessionStorage.getItem("visitCount");
+
+if (savedCount) {
+  visitCount = Number(savedCount);
+} else {
+  visitCount = 1;
+}
+
+sessionStorage.setItem("visitCount", visitCount.toString());
+
+console.log("Visit count (session):", visitCount);
