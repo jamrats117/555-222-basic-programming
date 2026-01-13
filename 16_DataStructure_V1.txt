@@ -1,0 +1,9 @@
+// =======================
+// Data Structure: Array
+// =======================
+
+const drugList: string[] = ["Paracetamol", "Amoxicillin", "Metformin"];
+
+for (const drug of drugList) {
+  console.log("Drug:", drug);
+}
