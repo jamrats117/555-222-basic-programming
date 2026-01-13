@@ -1,0 +1,11 @@
+// =======================
+// Data Structure: Object (Record)
+// =======================
+
+const drugStock: Record<string, number> = {
+  Paracetamol: 120,
+  Amoxicillin: 45,
+  Metformin: 200
+};
+
+console.log("Paracetamol stock:", drugStock["Paracetamol"]);
