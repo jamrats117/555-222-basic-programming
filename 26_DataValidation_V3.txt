@@ -1,0 +1,16 @@
+// =======================
+// Validation: User Input
+// =======================
+
+const input = prompt("Enter patient age:");
+const age = Number(input);
+
+if (input === null || input.trim() === "") {
+  console.log("Error: Age is required");
+} else if (isNaN(age)) {
+  console.log("Error: Age must be a number");
+} else if (age < 0 || age > 120) {
+  console.log("Error: Age out of valid range");
+} else {
+  console.log("Patient age:", age);
+}
