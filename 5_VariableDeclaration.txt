@@ -1,0 +1,20 @@
+// =======================
+// Variable Declaration
+// let vs const
+// =======================
+
+// ค่าคงที่ (ไม่ควรเปลี่ยน)
+const maxScore: number = 100;
+
+// ค่าที่เปลี่ยนได้
+let currentScore: number = 40;
+
+console.log("Initial score:", currentScore);
+
+// อัปเดตค่า
+currentScore = currentScore + 20;
+
+console.log("Updated score:", currentScore);
+
+// ❌ ลองปลดคอมเมนต์บรรทัดนี้เพื่อดู error
+// maxScore = 120;
