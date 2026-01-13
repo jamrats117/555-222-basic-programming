@@ -1,0 +1,16 @@
+// =======================
+// IPO: BMI Calculator
+// =======================
+
+// Input
+const weightKg: number = 70;     // น้ำหนัก (kg)
+const heightCm: number = 170;    // ส่วนสูง (cm)
+
+// Process
+const heightM: number = heightCm / 100;
+const bmi: number = weightKg / (heightM * heightM);
+
+// Output
+console.log("Weight (kg):", weightKg);
+console.log("Height (cm):", heightCm);
+console.log("BMI:", bmi.toFixed(2));
