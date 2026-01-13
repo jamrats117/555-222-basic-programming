@@ -1,0 +1,65 @@
+// =======================
+// CRUD Exercise 2: User Input & Validation
+// =======================
+
+type Medication = {
+  drugName: string;
+  doseMg: number;
+};
+
+let meds: Medication[] = [
+  { drugName: "Metformin", doseMg: 500 },
+  { drugName: "Paracetamol", doseMg: 1000 }
+];
+
+// Utility: แสดงรายการ
+function listMeds(): void {
+  console.log("=== Medication List ===");
+  for (const m of meds) {
+    console.log("-", m.drugName, m.doseMg + " mg");
+  }
+}
+
+// ---- User Flow ----
+const action = prompt("Enter action (add / update):");
+
+if (action === null) {
+  console.log("Cancelled by user");
+} else if (action !== "add" && action !== "update") {
+  console.log("Error: action must be 'add' or 'update'");
+} else {
+  const drugName = prompt("Enter drug name:");
+
+  if (drugName === null || drugName.trim() === "") {
+    console.log("Error: drug name is required");
+  } else {
+    const doseInput = prompt("Enter dose (mg):");
+    const dose = Number(doseInput);
+
+    if (doseInput === null || doseInput.trim() === "") {
+      console.log("Error: dose is required");
+    } else if (isNaN(dose) || dose <= 0) {
+      console.log("Error: dose must be a positive number");
+    } else {
+      if (action === "add") {
+        // CREATE
+        meds.push({ drugName, doseMg: dose });
+        console.log("Added:", drugName, dose + " mg");
+      }
+
+      if (action === "update") {
+        // UPDATE
+        const med = meds.find(m => m.drugName === drugName);
+
+        if (!med) {
+          console.log("Update failed: drug not found ->", drugName);
+        } else {
+          med.doseMg = dose;
+          console.log("Updated:", drugName, "to", dose + " mg");
+        }
+      }
+
+      listMeds();
+    }
+  }
+}
