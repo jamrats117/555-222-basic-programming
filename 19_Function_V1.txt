@@ -1,1 +1,10 @@
+// =======================
+// Function: Total Dose
+// =======================
 
+function calculateTotalDose(dosePerKg: number, weight: number): number {
+  return dosePerKg * weight;
+}
+
+const totalDose = calculateTotalDose(10, 60);
+console.log("Total dose (mg):", totalDose);
