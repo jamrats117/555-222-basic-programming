@@ -1,0 +1,12 @@
+// =======================
+// Variables & Data Types
+// Example 1: Student Profile
+// =======================
+
+const studentName: string = "Somchai";
+const studentAge: number = 21;
+const isActive: boolean = true;
+
+console.log("Name:", studentName);
+console.log("Age:", studentAge);
+console.log("Active:", isActive);
