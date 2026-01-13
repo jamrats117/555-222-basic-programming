@@ -1,0 +1,13 @@
+// =======================
+// Conditional Logic: Drug Level
+// =======================
+
+const drugLevel: number = 8; // mg/L
+
+if (drugLevel < 10) {
+  console.log("Drug level: Low");
+} else if (drugLevel <= 20) {
+  console.log("Drug level: Therapeutic");
+} else {
+  console.log("Drug level: High");
+}
