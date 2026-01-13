@@ -1,0 +1,15 @@
+// =======================
+// Loop: for...in
+// =======================
+
+const patientAge: Record<string, number> = {
+  Somchai: 68,
+  Ananda: 45,
+  Pranee: 72
+};
+
+for (const name in patientAge) {
+  if (patientAge[name] >= 65) {
+    console.log(name, "is high-risk (elderly)");
+  }
+}
