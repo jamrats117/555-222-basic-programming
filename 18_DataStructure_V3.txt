@@ -1,0 +1,23 @@
+// =======================
+// Data Structure: Array of Objects
+// =======================
+
+type Medication = {
+  patientName: string;
+  drugName: string;
+  doseMg: number;
+};
+
+const medications: Medication[] = [
+  { patientName: "Somchai", drugName: "Metformin", doseMg: 500 },
+  { patientName: "Ananda", drugName: "Paracetamol", doseMg: 1000 }
+];
+
+for (const med of medications) {
+  console.log(
+    med.patientName,
+    "takes",
+    med.drugName,
+    med.doseMg + " mg"
+  );
+}
