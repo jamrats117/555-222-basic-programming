@@ -1,0 +1,10 @@
+// =======================
+// Operators: Comparison
+// =======================
+
+const drugLevel: number = 12;   // mg/L
+
+const isInRange: boolean = drugLevel >= 10 && drugLevel <= 20;
+
+console.log("Drug level:", drugLevel);
+console.log("In therapeutic range:", isInRange);
